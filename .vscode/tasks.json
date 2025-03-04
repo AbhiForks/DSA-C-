@@ -4,41 +4,19 @@
     {
       "label": "Compile and run",
       "type": "shell",
-      "command": "",
-      "args": [
-        "copy",
-        "\"${file}\"",
-        "${workspaceFolder}\\jspwTest.cpp",
-        "&&",
-        "g++",
-        "jspwTest.cpp",
-        "-o",
-        "jspwTest",
-        "&&",
-        "jspwTest",
-        "<",
-        "input.txt",
-        ">",
-        "output.txt",
-        "&&",
-        "del",
-        "jspwTest.exe",
-        "&&",
-        "del",
-        "jspwTest.cpp"
-      ],
+      "command": "copy \"${file}\" \"${workspaceFolder}\\jspwTest.cpp\" && g++ jspwTest.cpp -o jspwTest && .\\jspwTest < input.txt > output.txt && del jspwTest.exe && del jspwTest.cpp",
       "presentation": {
         "reveal": "never"
       },
       "group": {
         "kind": "build",
-        "isDefault": true,
+        "isDefault": true
       },
       "problemMatcher": {
         "owner": "cpp",
         "fileLocation": [
           "relative",
-          "${workspaceRoot}"
+          "${workspaceFolder}"
         ],
         "pattern": {
           "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
