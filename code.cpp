@@ -377,3 +377,34 @@
 //     return 0;
 // }
 
+/////////////////////Striver A2Z/////////////
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int Marks;
+    cin >> Marks;
+
+    if (Marks >= 80 && Marks <= 100) {
+        cout << "you got A Grade";
+    }
+    else if (Marks >= 60 && Marks <= 79) {
+        cout << "you got B Grade";
+    }
+    else if (Marks >= 50 && Marks <= 59) {
+        cout << "you got C Grade";
+    }
+    else if (Marks >= 45 && Marks <= 49) {
+        cout << "you got D Grade";
+    }
+    else if (Marks >= 25 && Marks <= 44) {
+        cout << "you got E Grade";
+    }
+    else if (Marks < 25) {
+        cout << "You Failed The Exam";
+    }
+
+    return 0;
+}
+
